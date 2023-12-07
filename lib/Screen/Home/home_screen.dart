@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_framework_all_contain/Screen/Home/bloc/home_bloc.dart';
 import 'package:flutter_framework_all_contain/Screen/Home/home_nav_bar_screen.dart';
-import 'package:flutter_framework_all_contain/Screen/Home/newfeed_nav_bar_screen.dart';
+import 'package:flutter_framework_all_contain/Screen/RushLearning/rushlearn_nav_bar_screen.dart';
 import 'package:flutter_framework_all_contain/Screen/page2.dart';
 import 'package:flutter_framework_all_contain/Screen/page4.dart';
 import 'package:flutter_framework_all_contain/Screen/page5.dart';
@@ -9,7 +9,7 @@ import 'package:flutter_framework_all_contain/Screen/page5.dart';
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
   static const List<_BottomTab> bottomTabs = <_BottomTab>[
-    _BottomTab('NewFeed', Icon(Icons.home)),
+    _BottomTab('RushLearn', Icon(Icons.home)),
     _BottomTab('Page2', Icon(Icons.menu)),
     _BottomTab('Home', Icon(Icons.assignment)),
     _BottomTab('Page4', Icon(Icons.card_giftcard_outlined)),
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // appBar: AppBar(
       //     title: Center(
       //       child: Text(
-      //         "NewFeed    ",
+      //         "RushLearn    ",
       //         style: TextStyle(color: Colors.white),
       //       ),
       //     ),
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: IndexedStack(
           index: currentIndex,
           children: <Widget>[
-            NewFeedNavBarScreen(),
+            RushLearnNavBarScreen(),
             PageTwo(),
             HomeNavBarScreen(),
             PageFour(),
