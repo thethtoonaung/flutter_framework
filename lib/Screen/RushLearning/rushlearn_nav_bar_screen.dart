@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_framework_all_contain/Screen/RushLearning/dart/dart_home_page.dart';
+import 'package:flutter_framework_all_contain/Screen/RushLearning/flutter_framework/flutter_framework_home.dart';
 
 class RushLearnNavBarScreen extends StatelessWidget {
   const RushLearnNavBarScreen({super.key});
@@ -45,17 +46,24 @@ class RushLearnNavBarScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: 60,
-                decoration: BoxDecoration(
-                    color: Colors.purple.shade200,
-                    borderRadius: BorderRadius.circular(8)),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "  Flutter Framework",
-                    style: TextStyle(fontSize: 18),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            FlutterFrameworkHome())),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 60,
+                  decoration: BoxDecoration(
+                      color: Colors.purple.shade200,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "  Flutter Framework",
+                      style: TextStyle(fontSize: 18),
+                    ),
                   ),
                 ),
               ),
